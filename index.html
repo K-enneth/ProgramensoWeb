@@ -6,6 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <section class="full-screen">
+        <h2><i>CRUD Firebase Realtime Database</i></h2>
+        <form id="form-price">
+        <input type="text" id="product" placeholder="Producto" required />
+        <input type="text" id="price" placeholder="Precio" required />
+        <input type="submit" value="Salvar" />
+        <input type="hidden" id="key" />
+        </form>
+        <table id="table-price">
+        <thead>
+            <tr>
+            <th>key</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th></th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+        <template id="template-price">
+        <tr id="" class="key-id">
+            <th class="key">key</th>
+            <td class="product">Producto</td>
+            <td class="price">Precio</td>
+            <td><button class="edit">Editar</button></td>
+            <td><button class="delete">Eliminar</button></td>
+        </tr>
+        </template>
+    </section>
+
+    <script src="js/script.js"> </script>
 </body>
 </html>
