@@ -5,4 +5,3 @@ import { authGoogle } from "./modules/firebaseAuthGoogle.js";
 
 authGoogle(app);
 firebaseCRUD(app);
-authEmail(app);

@@ -4,7 +4,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
-} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 export function authEmail(app) {
     const d = document,

@@ -6,10 +6,10 @@ import {
     push,
     update,
     remove,
-} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
 
 export function firebaseCRUD(app){
-    const d = document;
+    const d = document,
     db = getDatabase(app),
     refPrice = ref(db, "cities"),
     $form = d.getElementById("form-price"),
