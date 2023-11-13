@@ -11,7 +11,7 @@ import {
 export function firebaseCRUD(app){
     const d = document,
     db = getDatabase(app),
-    refPrice = ref(db, "cities"),
+    refPrice = ref(db, "prices"),
     $form = d.getElementById("form-price"),
     $table = d.getElementById("table-price"),
     $template = d.getElementById("template-price").content,
@@ -19,14 +19,9 @@ export function firebaseCRUD(app){
 
     function renderPrice() {
         onValue(refPrice, (snapshot) => {
-          //limpiar el contenido de la tabla
         $table.querySelector("tbody").innerHTML = "";
     
         snapshot.forEach((el) => {
-            //console.log(el);
-            //console.log(el.key);
-            //console.log(el.val());
-    
             let values = el.val(),
             key = el.key;
     
@@ -55,10 +50,8 @@ export function firebaseCRUD(app){
     };
 
     if (!key.value) {
-      //Insertar
     push(ref(db, "price"), values);
     } else {
-      //Actualizar
     update(ref(db), {
         ["/price/" + key.value]: values,
     });
@@ -72,8 +65,7 @@ d.addEventListener("click", (e) => {
     return false;
 
     if (e.target.matches(".edit")) {
-      //alert("Editar");
-      //console.log(e.target.parentElement.parentElement.id);
+    alert("Editar");
     let $parent = e.target.parentElement.parentElement;
     $form.product.value = $parent.querySelector(".product").innerText;
     $form.price.value = $parent.querySelector(".price").innerText;
@@ -81,7 +73,7 @@ d.addEventListener("click", (e) => {
     }
 
     if (e.target.matches(".delete")) {
-      //alert("Eliminar");
+    alert("Eliminar");
     let key = e.target.parentElement.parentElement.id,
         deleteId = confirm(`¿Estás seguro de eliminar el id ${key}?`);
 

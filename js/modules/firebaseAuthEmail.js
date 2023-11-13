@@ -15,13 +15,11 @@ export function authEmail(app) {
     console.log(user);
 
     if (user) {
-        //console.log("Usuario Autenticado");
         $appAuthEmail.innerHTML = `
         <p>Si ves este contenido es porque estás logueado</p>
         <button id="logout">Salir</button>
         `;
     } else {
-        //console.log("Usuario NO Autenticado");
         $appAuthEmail.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
     }
     });
@@ -32,8 +30,6 @@ export function authEmail(app) {
 
     if ($form.matches("#form-signin")) {
         alert("Creando Cuenta");
-        //console.log(form.nombre.value, form.email.value, form.pass.value);
-
         createUserWithEmailAndPassword(auth, $form.email.value, $form.pass.value)
         .then((res) => {
             console.log(res);
@@ -52,12 +48,10 @@ export function authEmail(app) {
 
         signInWithEmailAndPassword(auth, $form.email.value, $form.pass.value)
         .then((res) => {
-            //console.log(res);
             $appAuthEmail.innerHTML = `<p>Usuario logueado con el correo <b>${$form.email.value}</b></p>`;
             $form.reset();
         })
         .catch((err) => {
-            //console.log(err);
             $appAuthEmail.innerHTML = `<p>Ocurrio un error al iniciar sesión <b>${err.message}</b></p>`;
             $form.pass.focus();
         });

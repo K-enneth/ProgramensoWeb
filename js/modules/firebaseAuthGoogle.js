@@ -13,9 +13,7 @@ export function authGoogle(app) {
     $appAuthGoogle = d.getElementById("app-auth-google");
 
     onAuthStateChanged(auth, (user) => {
-      //console.log(user);  
     if (user) {
-        //console.log("Usuario Autenticado");
         $appAuthGoogle.innerHTML = `
         <p>Si ves este contenido es porque estas logueado</p>
         <button id="google-logout">Salir</button>
@@ -23,7 +21,6 @@ export function authGoogle(app) {
         <img src="${user.photoURL}" alt="${user.displayName}">
         `;
     } else {
-        //console.log("Usuario NO Autenticado");
         $appAuthGoogle.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
     }
     });
@@ -31,7 +28,6 @@ export function authGoogle(app) {
     d.addEventListener("click", (e) => {
     if (e.target.matches("#google-login")) {
         alert("Ingresando con Google");
-
         signInWithPopup(auth, provider)
         .then((res) => {
             console.log(res);
