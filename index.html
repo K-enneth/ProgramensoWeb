@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ProgramensoStudios</title>
 </head>
 <body>
     <section class="full-screen">
-        <h2><i>CRUD Firebase Realtime Database</i></h2>
+        <h2><i>Prueba Database</i></h2>
         <form id="form-price">
         <input type="text" id="product" placeholder="Producto" required />
         <input type="text" id="price" placeholder="Precio" required />
@@ -35,6 +35,23 @@
             <td><button class="delete">Eliminar</button></td>
         </tr>
         </template>
+    </section>
+    <section class="full-screen">
+        <h2>Autenticación con Email</h2>
+        <h3>Registrarse</h3>
+        <form id="form-signin">
+        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="email" name="email" placeholder="email" required />
+        <input type="password" name="pass" placeholder="contraseña" required />
+        <input type="submit" value="Crear Cuenta" />
+        </form>
+        <h3>Iniciar Sesión</h3>
+        <form id="form-login">
+        <input type="email" name="email" placeholder="email" required />
+        <input type="password" name="pass" placeholder="contraseña" required />
+        <input type="submit" value="Ingresar" />
+        </form>
+        <article id="app-auth-email"></article>
     </section>
 
     <script src="js/script.js" type="module"> </script>
