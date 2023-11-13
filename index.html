@@ -36,6 +36,25 @@
         </tr>
         </template>
     </section>
+
+    <section class="full-screen">
+        <h2>Autenticación con Email</h2>
+        <h3>Registrarse</h3>
+        <form id="form-signin">
+        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="email" name="email" placeholder="email" required />
+        <input type="password" name="pass" placeholder="contraseña" required />
+        <input type="submit" value="Crear Cuenta" />
+        </form>
+        <h3>Iniciar Sesión</h3>
+        <form id="form-login">
+        <input type="email" name="email" placeholder="email" required />
+        <input type="password" name="pass" placeholder="contraseña" required />
+        <input type="submit" value="Ingresar" />
+        </form>
+        <article id="app-auth-email"></article>
+    </section>
+
     <section class="full-screen">
         <h2>Autenticación con Google</h2>
         <button id="google-login">Ingresa</i></button>
