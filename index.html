@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProgramensoStudios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tienda en Línea</title>
 </head>
 <body>
+    <header>
+        <h1>Tienda en Línea</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+            </ul>
+            <div id="cart-icon" onclick="toggleCart()">
+                <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 50px;">
+                <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
 
+    <section id="home">
+        <div>
+            <h2>Bienvenido a nuestra tienda en línea</h2>
+            <p>Ofrecemos productos de alta calidad para ti.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h2>Acerca de Nosotros</h2>
+            <p>Una breve descripción de tu empresa.</p>
+            <img src="about-image.jpg" alt="Imagen sobre nosotros">
+            <ul class="timeline">
+                <li>2000 - Fundación de la Empresa</li>
+                <li>2005 - Apertura de sucursal</li>
+                <li>2010 - Lanzamiento de productos destacados</li>
+                <li>2015 - Expansión internacional</li>
+                <li>2020 - Innovaciones clave</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-card" onclick="buyProduct(1)">
+            <img src="product1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Precio: $X.XX</p>
+            <button>Añadir al Carrito</button>
+        </div>
+        
+    </section>
+
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items">
+            
+        </div>
+        <div id="checkout-btn" onclick="showCheckout()">Pagar</div>
+    </section>
+
+    <section id="checkout">
+        <h2>Pagar</h2>
+       
+    </section>
+
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
