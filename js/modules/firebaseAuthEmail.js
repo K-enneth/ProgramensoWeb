@@ -5,6 +5,7 @@ import {
     onAuthStateChanged,
     signOut,
     sendEmailVerification,
+    sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 export function authEmail(app) {
@@ -69,4 +70,15 @@ export function authEmail(app) {
         signOut(auth);
     }
     });
+
+    if(e.target.matches("#forgot-pass")){
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+        alert("Enviando correo de recuperación")
+        })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        });
+    }
 }
