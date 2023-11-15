@@ -24,7 +24,6 @@ export function firebaseCRUD(app){
         snapshot.forEach((el) => {
             let values = el.val(),
             key = el.key;
-    
             $template.querySelector(".key-id").id = key;
             $template.querySelector(".key").innerText = key;
             $template.querySelector(".product").innerText = values.product;
