@@ -69,16 +69,16 @@ export function authEmail(app) {
         alert("Cerrando sesión");
         signOut(auth);
     }
-    });
-
+    
     if(e.target.matches("#forgot-pass")){
         sendPasswordResetEmail(auth, email)
         .then(() => {
-        alert("Enviando correo de recuperación")
+            alert("Enviando correo de recuperación")
         })
         .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+            const errorCode = error.code;
+            const errorMessage = error.message;
         });
-    }
+    }   
+    });
 }
