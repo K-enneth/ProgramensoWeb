@@ -4,6 +4,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
+    sendEmailVerification,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 export function authEmail(app) {
@@ -34,6 +35,10 @@ export function authEmail(app) {
         .then((res) => {
             console.log(res);
             $appAuthEmail.innerHTML = `<p>Usuario creado con el correo <b>${$form.email.value}</b></p>`;
+            sendEmailVerification(auth.currentUser)
+            .then(() => {
+
+            });
             $form.reset();
         })
     .catch((err) => {
