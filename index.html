@@ -8,14 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Tienda en Línea</h1>
+        <h1>Pogamenso</h1>
         <nav>
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#products">Productos</a></li>
             </ul>
-            <div id="cart-icon" onclick="toggleCart()">
+            <div id="cart" onclick="toggleCart()">
                 <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 50px;">
                 <span id="cart-count">0</span>
             </div>
@@ -49,7 +49,14 @@
         <div class="product-card" onclick="buyProduct(1)">
             <img src="product1.jpg" alt="Producto 1">
             <h3>Producto 1</h3>
-            <p>Precio: $X.XX</p>
+            <p>Precio: $1000</p>
+            <button>Añadir al Carrito</button>
+        </div>
+
+        <div class="product-card" onclick="buyProduct(2)">
+            <img src="product1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Precio: $1000</p>
             <button>Añadir al Carrito</button>
         </div>
         
@@ -69,5 +76,6 @@
     </section>
 
     <script src="js/script.js" type="module"></script>
+    <script src="js/modules/cart.js"></script>
 </body>
 </html>
