@@ -4,3 +4,5 @@ ProgramensoStudios es nuestro estudio indie de videojuegos, en la página pondre
 ## Integrantes del equipo
 - Kenny Álvarez del Castillo Nava: **Registro y Autentificación, Búsqueda y filtros, Carrito de compras, Catálogo de productos**
 - Karina Vellenaweth Moreno: **Gestión de pedidos, Panel de Adminstración, Diseño, Interfaz y Experiencia de Usuario**
+## GITHUB PAGES
+https://k-enneth.github.io/ProgramensoWeb/
