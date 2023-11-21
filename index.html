@@ -14,32 +14,33 @@
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#products">Productos</a></li>
+                <li><div id="cart" onclick="toggleCart()">
+                    <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 20px; text-align: right;">
+                    <span id="cart-count">0</span>
+                </div></li>
             </ul>
-            <div id="cart" onclick="toggleCart()">
-                <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 50px;">
-                <span id="cart-count">0</span>
-            </div>
+            
         </nav>
     </header>
 
     <section id="home">
         <div>
-            <h2>Bienvenido a nuestra tienda en línea</h2>
-            <p>Ofrecemos productos de alta calidad para ti.</p>
+            <h2>Bienvenidx a PogamensoWeb</h2>
+            <p>Compra xfa</p>
         </div>
     </section>
 
     <section id="about">
         <div>
             <h2>Acerca de Nosotros</h2>
-            <p>Una breve descripción de tu empresa.</p>
-            <img src="about-image.jpg" alt="Imagen sobre nosotros">
+            <p>Somos pogamenso</p>
+            <img src="about-image.jpg" alt="Imagen sobre nosotros" style="max-width: 350px;">
             <ul class="timeline">
-                <li>2000 - Fundación de la Empresa</li>
-                <li>2005 - Apertura de sucursal</li>
-                <li>2010 - Lanzamiento de productos destacados</li>
-                <li>2015 - Expansión internacional</li>
-                <li>2020 - Innovaciones clave</li>
+                <li>2021 - Fundación de la Empresa</li>
+                <li>2022 - Bento</li>
+                <li>2023 - Salsa Salsa</li>
+                <li>2023 - EGS</li>
+                <li>2023 - Void Rider</li>
             </ul>
         </div>
     </section>
@@ -50,29 +51,25 @@
             <img src="product1.jpg" alt="Producto 1">
             <h3>Producto 1</h3>
             <p>Precio: $1000</p>
-            <button>Añadir al Carrito</button>
+            <button class="add-to-cart-btn">Añadir al Carrito</button>
         </div>
 
         <div class="product-card" onclick="buyProduct(2)">
-            <img src="product1.jpg" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>Precio: $1000</p>
-            <button>Añadir al Carrito</button>
+            <img src="product2.jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Precio: $1200</p>
+            <button class="add-to-cart-btn">Añadir al Carrito</button>
         </div>
-        
     </section>
 
     <section id="cart">
         <h2>Carrito de Compras</h2>
-        <div id="cart-items">
-            
-        </div>
+        <div id="cart-items"></div>
         <div id="checkout-btn" onclick="showCheckout()">Pagar</div>
     </section>
 
     <section id="checkout">
         <h2>Pagar</h2>
-       
     </section>
 
     <script src="js/script.js" type="module"></script>
