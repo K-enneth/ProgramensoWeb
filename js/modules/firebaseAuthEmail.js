@@ -62,23 +62,23 @@ export function authEmail(app) {
             $form.pass.focus();
         });
     }
-
-    if($form.matches("#form-pass")){
-        alert("Enviando correo");
-        sendPasswordResetEmail(auth, $form.email.value)
-        .then(() => {
-        })
-        .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        });
-    }
     });
 
     d.addEventListener("click", (e) => {
     if (e.target.matches("#logout")) {
         alert("Cerrando sesión");
         signOut(auth);
-    } 
+    }
+    
+    if(e.target.matches("#forgot-pass")){
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+            alert("Enviando correo de recuperación")
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+    }   
     });
 }

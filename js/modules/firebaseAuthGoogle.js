@@ -17,6 +17,8 @@ export function authGoogle(app) {
         $appAuthGoogle.innerHTML = `
         <p>Si ves este contenido es porque estas logueado</p>
         <button id="google-logout">Salir</button>
+        <p>Bienvenido ${user.displayName}</p>
+        <img src="${user.photoURL}" alt="${user.displayName}">
         `;
     } else {
         $appAuthGoogle.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
