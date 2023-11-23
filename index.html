@@ -18,9 +18,25 @@
                     <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 20px; text-align: right;">
                     <span id="cart-count">0</span>
                 </div></li>
+                <li><a href="#" onclick="togglePopup('registerPopup')">Registrarse</a></li>
+                <li><a href="#" onclick="togglePopup('loginPopup')" >Iniciar Sesión</a></li>
             </ul>
-            
         </nav>
+        <div>
+            <div class="close-btn"&times;></div>
+            <h3>Registrarse</h3>
+        <form id="form-signin">
+        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="email" name="email" placeholder="email" required />
+        <input type="password" name="pass" placeholder="contraseña" required />
+        <input type="submit" value="Crear Cuenta" />
+        </form>
+        </div>
+
+        <div id="loginPopup" class="popup">
+            <a href="#login">Opción A</a>
+            <a href="#login">Opción B</a>
+        </div>
     </header>
 
     <section id="home">
@@ -28,7 +44,10 @@
             <h2>Bienvenidx a PogamensoWeb</h2>
             <p>Compra xfa</p>
         </div>
+        <article id="app-auth-email"></article>
     </section>
+
+    
 
     <section id="about">
         <div>
