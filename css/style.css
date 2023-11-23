@@ -110,14 +110,28 @@ section {
 
 .popup {
     position: absolute;
-    top:50%;
+    top:-150%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    opacity:0;
+    transform: translate(-50%,-50%) scale(1.25);
     width: 380px;
     padding: 20px 30px;
     background:#45a049;;
     box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
     border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms
+
+}
+
+.active{
+    top: 50%;
+    opacity:1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms
 }
 
 .popup .close-btn {
@@ -172,4 +186,5 @@ section {
     border-radius: 10px;
     cursor: pointer;
 }
+
 

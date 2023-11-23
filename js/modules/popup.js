@@ -1,4 +1,7 @@
-export function togglePopup(popupId) {
-    var popup = document.getElementById(popupId);
-    popup.style.display = (popup.style.display = 'block');
+export function togglePopup() {
+    const d = document;
+    d.querySelector("#show-login").addEventListener("click",(e) => {
+        d.querySelector(".popup").classList.add("active")
+    })
+    
 }
