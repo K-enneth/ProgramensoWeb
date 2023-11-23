@@ -24,6 +24,24 @@
         </nav>
     </header>
 
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <form class="form-signin" id="form-signin">
+            <h2>Registrarse</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email" required >
+            </div>
+            <div class="form-element">
+                <label for="password">Contraseña</label>
+                <input type="password" name="pass" placeholder="contraseña" required  >
+            </div>
+            <div class="form-element">
+                <input type="submit" value="Crear Cuenta" />
+            </div>
+        </form>
+    </div>
+
     <section id="home">
         <div>
             <h2>Bienvenidx a PogamensoWeb</h2>
@@ -31,6 +49,7 @@
         </div>
         <article id="app-auth-email"></article>
     </section>
+
 
     
 
@@ -77,14 +96,6 @@
     </section>
 
     <section>
-        <h2>Autenticación con Email</h2>
-        <h3>Registrarse</h3>
-        <form id="form-signin">
-        <input type="text" name="nombre" placeholder="nombre" required />
-        <input type="email" name="email" placeholder="email" required />
-        <input type="password" name="pass" placeholder="contraseña" required />
-        <input type="submit" value="Crear Cuenta" />
-        </form>
         <h3>Iniciar Sesión</h3>
         <form id="form-login">
         <input type="email" name="email" placeholder="email" required />
