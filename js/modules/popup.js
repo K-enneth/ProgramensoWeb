@@ -1,7 +1,7 @@
-export function togglePopup() {
+export function togglePopup(popupId, btnId) {
     const d = document;
-    d.querySelector("#show-login").addEventListener("click",(e) => {
-        d.querySelector(".popup").classList.add("active")
+    d.querySelector("#btnId").addEventListener("click",(e) => {
+        d.querySelector(".popup").classList.add("act")
     })
     
 }
