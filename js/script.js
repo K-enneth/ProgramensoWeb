@@ -6,12 +6,12 @@ import { authGoogle } from "./modules/firebaseAuthGoogle.js";
 
 authEmail(app);
 
-document.querySelector ("#show-login").addEventListener("click", function(){
-  document.querySelector(".popup").classList.add("active");
+document.querySelector ("#show-signin").addEventListener("click", function(){
+  document.querySelector(".popupS").classList.add("active");
 });
 
-document.querySelector (".popup .close-btn").addEventListener("click", function(){
-  document.querySelector(".popup").classList.remove("active");
+document.querySelector (".popupS .close-btn").addEventListener("click", function(){
+  document.querySelector(".popupS").classList.remove("active");
 });
 
 document.addEventListener('DOMContentLoaded', function () {
