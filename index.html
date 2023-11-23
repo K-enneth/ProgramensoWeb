@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProgramensoStudios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tienda en Línea</title>
 </head>
 <body>
+    <header>
+        <h1>Pogamenso</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><div id="cart" onclick="toggleCart()">
+                    <img src="img/cart-icon.png" alt="Carrito de Compras" style="max-width: 20px; text-align: right;">
+                    <span id="cart-count">0</span>
+                </div></li>
+            </ul>
+            
+        </nav>
+    </header>
 
+    <section id="home">
+        <div>
+            <h2>Bienvenidx a PogamensoWeb</h2>
+            <p>Compra xfa</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos pogamenso</p>
+            <img src="about-image.jpg" alt="Imagen sobre nosotros" style="max-width: 350px;">
+            <ul class="timeline">
+                <li>2021 - Fundación de la Empresa</li>
+                <li>2022 - Bento</li>
+                <li>2023 - Salsa Salsa</li>
+                <li>2023 - EGS</li>
+                <li>2023 - Void Rider</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-card" onclick="buyProduct(1)">
+            <img src="product1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Precio: $1000</p>
+            <button class="add-to-cart-btn">Añadir al Carrito</button>
+        </div>
+
+        <div class="product-card" onclick="buyProduct(2)">
+            <img src="product2.jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Precio: $1200</p>
+            <button class="add-to-cart-btn">Añadir al Carrito</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <div id="checkout-btn" onclick="showCheckout()">Pagar</div>
+    </section>
+
+    <section id="checkout">
+        <h2>Pagar</h2>
+    </section>
+
+    <script src="js/script.js" type="module"></script>
+    <script src="js/modules/cart.js"></script>
 </body>
 </html>
