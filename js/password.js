@@ -11,12 +11,14 @@ auth = getAuth(app);
 d.addEventListener("submit", (e) => {
     e.preventDefault();
     let $form = e.target;
-    
+
     if($form.matches("#form-pass")){
         alert("Enviando correo");
         sendPasswordResetEmail(auth, $form.email.value)
         .then(() => {
+            $form.reset();
         })
+        
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
