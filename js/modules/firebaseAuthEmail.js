@@ -23,18 +23,12 @@ export function authEmail(app) {
         $login.style.display = 'none';
         $signin.style.display = 'none';
         $logoff.innerHTML= `
-        <button id="logout">Salir</button>
-        `
-        $appAuthEmail.innerHTML = `
-        <p>Si ves este contenido es porque estás logueado</p>
-        <button id="logout">Salir</button>
+        <a href="#" id="logout">Cerrar sesión</a>
         `;
     } else {
         $login.style.display = 'block';
         $signin.style.display = 'block';
         $logoff.innerHTML= ``;
-
-        $appAuthEmail.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
     }
     });
 

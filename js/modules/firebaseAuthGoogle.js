@@ -9,37 +9,39 @@ import {
 export function authGoogle(app) {
     const d = document,
     auth = getAuth(app),
+    $logoff = d.getElementById("logoff-auth"),
     provider = new GoogleAuthProvider(),
-    $appAuthGoogle = d.getElementById("app-auth-google");
+    $login = d.getElementById("show-login"),
+    $signin = d.getElementById("show-signin");
 
     onAuthStateChanged(auth, (user) => {
     if (user) {
-        $appAuthGoogle.innerHTML = `
-        <p>Si ves este contenido es porque estas logueado</p>
-        <button id="google-logout">Salir</button>
-        <p>Bienvenido ${user.displayName}</p>
-        <img src="${user.photoURL}" alt="${user.displayName}">
+        $login.style.display = 'none';
+        $signin.style.display = 'none';
+        $logoff.innerHTML= `
+        <a href="#" id="logout">Cerrar sesión</a>
         `;
     } else {
-        $appAuthGoogle.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
+        $login.style.display = 'block';
+        $signin.style.display = 'block';
+        $logoff.innerHTML= ``;
     }
     });
 
+    
     d.addEventListener("click", (e) => {
     if (e.target.matches("#google-login")) {
         alert("Ingresando con Google");
         signInWithPopup(auth, provider)
         .then((res) => {
             console.log(res);
-            $appAuthGoogle.innerHTML = `<p>Bienvenido ${res.user.displayName}</p>`;
         })
         .catch((err) => {
             console.log(err);
-            $appAuthGoogle.innerHTML = `<p>Error: <i>${err.code}</i> - <b>${err.message}</b></p>`;
         });
     }
 
-    if (e.target.matches("#google-logout")) {
+    if (e.target.matches("#logout")) {
         alert("Cerrando sesión");
         signOut(auth);
     }

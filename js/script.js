@@ -4,6 +4,7 @@ import { authEmail } from "./modules/firebaseAuthEmail.js";
 import { authGoogle } from "./modules/firebaseAuthGoogle.js";
 
 authEmail(app);
+authGoogle(app);
 
 document.querySelector ("#show-signin").addEventListener("click", function(){
   document.querySelector("#signin").classList.add("active");
