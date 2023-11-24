@@ -3,7 +3,6 @@ import { firebaseCRUD } from "./modules/firebaseDataBase.js";
 import { authEmail } from "./modules/firebaseAuthEmail.js";
 import { authGoogle } from "./modules/firebaseAuthGoogle.js";
 
-
 authEmail(app);
 
 document.querySelector ("#show-signin").addEventListener("click", function(){
