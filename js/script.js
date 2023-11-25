@@ -2,26 +2,13 @@ import {app} from "./modules/firebaseConfig.js";
 import { firebaseCRUD } from "./modules/firebaseDataBase.js";
 import { authEmail } from "./modules/firebaseAuthEmail.js";
 import { authGoogle } from "./modules/firebaseAuthGoogle.js";
+import { togglePopup } from "./modules/popup.js";
 
 firebaseCRUD(app);
 authEmail(app);
 authGoogle(app);
+togglePopup();
 
-document.querySelector ("#show-signin").addEventListener("click", function(){
-  document.querySelector("#signin").classList.add("active");
-});
-
-document.querySelector ("#signin #close-signin").addEventListener("click", function(){
-  document.querySelector("#signin").classList.remove("active");
-});
-
-document.querySelector ("#show-login").addEventListener("click", function(){
-  document.querySelector("#login").classList.add("active");
-});
-
-document.querySelector ("#login #close-login").addEventListener("click", function(){
-  document.querySelector("#login").classList.remove("active");
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     // Recuperar los elementos guardados en localStorage al cargar la página
