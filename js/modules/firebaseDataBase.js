@@ -15,11 +15,11 @@ export function firebaseCRUD(app) {
     function renderProducts() {
         onValue(refPrice, (snapshot) => {
             $container.innerHTML = "";
-
             snapshot.forEach((el) => {
                 let values = el.val();
-                $template.querySelector("h3").innerText = values.product;
-                $template.querySelector("p").innerText = "Precio: $" + values.price;
+                $template.querySelector(".product").innerText = values.product;
+                $template.querySelector(".price").innerText = "Precio: $" + values.price;
+                $template.querySelector(".type").innerText = values.type;
 
                 let $clone = d.importNode($template, true);
                 $fragment.appendChild($clone);

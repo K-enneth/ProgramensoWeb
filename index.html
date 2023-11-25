@@ -79,9 +79,6 @@
         </div>
     </section>
 
-
-    
-
     <section id="about">
         <div>
             <h2>Acerca de Nosotros</h2>
@@ -96,13 +93,14 @@
             </ul>
         </div>
     </section>
-
+    
+    <h2>Nuestros Productos</h2>
     <section id="products">
-        <h2>Nuestros Productos</h2>
         <template id="template-product">
             <div class="product-card" onclick="buyProduct()">
-                <h3></h3>
-                <p></p>
+                <h3 class="product"></h3>
+                <p class="price"></p>
+                <p class="type"></p>
                 <button class="add-to-cart-btn">Añadir al Carrito</button>
             </div>
         </template>
@@ -131,9 +129,6 @@
         <div id="checkout-btn" onclick="showCheckout()">Pagar</div>
     </section>
 
-    <section id="checkout">
-        <h2>Pagar</h2>
-    </section>
 
 
     <script src="js/script.js" type="module"></script>
