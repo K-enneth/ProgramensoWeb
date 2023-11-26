@@ -49,10 +49,6 @@ const cart = {
     cart.addToCart(productId);
   }
   
-  function showCheckout() {
-    console.log("Mostrar pantalla de pago");
-  }
-  
   function showAddedToCartMessage() {
     alert("Producto añadido al carrito");
   }
