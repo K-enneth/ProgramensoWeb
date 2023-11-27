@@ -5,8 +5,13 @@ const cart = {
   addToCart: function (product) {
       this.items.push(product);
       updateCartCount();
+      this.calculateTotal();
       updateCartDisplay();
       showAddedToCartMessage();
+  },
+
+  calculateTotal: function () {
+      return this.items.reduce((total, item) => total + item.price, 0);
   },
 
   showCart: function () {
@@ -22,6 +27,9 @@ const cart = {
               cartItemsContainer.appendChild(cartItem);
           });
       }
+
+      const totalPriceContainer = document.getElementById('total-price');
+      totalPriceContainer.textContent = `$${this.calculateTotal()}`;
   },
 };
 
@@ -36,33 +44,22 @@ function updateCartDisplay() {
 }
 
 function buyProduct(button) {
-  // Obtener el contenedor del producto
   let productContainer = button.closest('.product-card');
-
-  // Obtener el nombre y otros detalles del producto desde el contenedor
   let productName = productContainer.querySelector('h3').innerText;
   let productPriceText = productContainer.querySelector('p').innerText;
-  
-  // Extraer el precio numérico del texto (por ejemplo, "Precio: $1000" -> 1000)
   let productPrice = parseInt(productPriceText.replace("Precio: $", ""));
 
-  // Crear un objeto de producto
   const product = {
       name: productName,
       price: productPrice,
   };
 
-  // Añadir el producto al carrito
   cart.addToCart(product);
-  
-  // Mostrar el mensaje de producto añadido al carrito
-  showAddedToCartMessage();
 }
 
 function showAddedToCartMessage() {
   alert("Producto añadido al carrito");
 }
 
-// Resto del código según tus necesidades, como la inicialización de Firebase y el manejo de eventos DOM.
 
-  
+
