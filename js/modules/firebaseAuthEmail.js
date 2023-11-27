@@ -11,18 +11,24 @@ import {
 export function authEmail(app) {
     const d = document,
     auth = getAuth(app),
-    $appAuthEmail = d.getElementById("app-auth-email");
+    $logoff = d.getElementById("logoff-auth"),
+    $appAuthEmail = d.getElementById("app-auth-email"),
+    $login = d.getElementById("show-login"),
+    $signin = d.getElementById("show-signin");
 
     onAuthStateChanged(auth, (user) => {
     console.log(user);
 
     if (user) {
-        $appAuthEmail.innerHTML = `
-        <p>Si ves este contenido es porque estás logueado</p>
-        <button id="logout">Salir</button>
+        $login.style.display = 'none';
+        $signin.style.display = 'none';
+        $logoff.innerHTML= `
+        <a href="#" id="logout">Cerrar sesión</a>
         `;
     } else {
-        $appAuthEmail.innerHTML = `<p>El contenido de esta sección es exclusivo para usuarios registrados</p>`;
+        $login.style.display = 'block';
+        $signin.style.display = 'block';
+        $logoff.innerHTML= ``;
     }
     });
 
