@@ -1,4 +1,3 @@
-
 const cart = {
   items: [],
 
@@ -60,6 +59,3 @@ function buyProduct(button) {
 function showAddedToCartMessage() {
   alert("Producto añadido al carrito");
 }
-
-
-
