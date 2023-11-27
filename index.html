@@ -97,36 +97,19 @@
     <h2>Nuestros Productos</h2>
     <section id="products">
         <template id="template-product">
-            <div class="product-card" onclick="buyProduct()">
+            <div class="product-card">
                 <h3 class="product"></h3>
                 <p class="price"></p>
                 <p class="type"></p>
-                <button class="add-to-cart-btn">Añadir al Carrito</button>
+                <button class="add-to-cart-btn" onclick="buyProduct(this)">Añadir al Carrito</button>
             </div>
         </template>
-    </section>
-
-    <section id="products">
-        <h2>Nuestros Productos</h2>
-        <div class="product-card" onclick="buyProduct(1)">
-            <img src="product1.jpg" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>Precio: $1000</p>
-            <button class="add-to-cart-btn">Añadir al Carrito</button>
-        </div>
-
-        <div class="product-card" onclick="buyProduct(2)">
-            <img src="product2.jpg" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <p>Precio: $1200</p>
-            <button class="add-to-cart-btn">Añadir al Carrito</button>
-        </div>
     </section>
 
     <section id="cart">
         <h2>Carrito de Compras</h2>
         <div id="cart-items"></div>
-        <div id="paypal-button-container">Pagar</div>
+        <div id="paypal-button-container"></div>
     </section>
 
 
