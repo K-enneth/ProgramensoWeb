@@ -1,14 +1,20 @@
+html{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1a1a1a; /* Dark background color for the entire page */
-    color: #fff; /* White text color */
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 header {
-    background-color: #333; /* Dark color for header */
+    background-color: #333; 
     color: #fff;
     padding: 2em;
     text-align: center;
@@ -24,15 +30,15 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease; /* Smooth transition for link color */
+    transition: color 0.3s ease; 
 }
 
 nav a:hover {
-    color: #e74c3c; /* Red color on hover */
+    color: #e74c3c; 
 }
 
 nav a.selected {
-    color: #e74c3c; /* Red color for selected link */
+    color: #e74c3c; 
 }
 
 section {
@@ -40,11 +46,11 @@ section {
 }
 
 .product-card {
-    border: 2px solid #3498db; /* Border color for product cards */
+    border: 2px solid #3498db; 
     padding: 2em;
     margin: 2em;
     text-align: center;
-    background-color: #2c3e50; /* Dark color for product cards */
+    background-color: #2c3e50; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
 }
@@ -69,15 +75,15 @@ section {
 
 #cart {
     cursor: pointer;
-    position: relative;
+   
 }
 
 #cart-count {
-    background-color: #e74c3c; /* Red color for cart count */
+    background-color: #e74c3c; 
     color: white;
     border-radius: 50%;
     padding: 0.5em 1em;
-    position: absolute;
+    
     top: 5px;
     right: 5px;
 }
@@ -90,7 +96,7 @@ section {
     transform: translate(-50%, -50%) scale(1.25);
     width: 400px;
     padding: 2em;
-    background: #333; /* Dark color for popups */
+    background: #333; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
@@ -118,8 +124,7 @@ section {
 }
 
 .form-signin {
-    background: #444; /* Dark color for forms */
-    padding: 2em;
+    background: #444; 
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -149,7 +154,7 @@ section {
     outline: none;
     border: 1px solid #555;
     border-radius: 8px;
-    background: #333; /* Dark color for input fields */
+    background: #333; 
     color: #fff;
 }
 
@@ -159,7 +164,7 @@ section {
     border: none;
     outline: none;
     font-size: 18px;
-    background: #e74c3c; /* Red color for submit button */
+    background: #e74c3c; 
     color: white;
     border-radius: 15px;
     cursor: pointer;
@@ -188,33 +193,33 @@ section {
     border: none;
     outline: none;
     font-size: 18px;
-    background: #e74c3c; /* Red color for Google button */
+    background: #e74c3c; 
     color: white;
     border-radius: 15px;
     cursor: pointer;
 }
-/* Responsive layout for product cards */
+
 @media only screen and (max-width: 1200px) {
     .product-card {
-        width: calc(25% - 4em); /* Four cards per row */
+        width: calc(25% - 4em); 
     }
 }
 
 @media only screen and (max-width: 900px) {
     .product-card {
-        width: calc(33.33% - 4em); /* Three cards per row */
+        width: calc(33.33% - 4em); 
     }
 }
 
 @media only screen and (max-width: 600px) {
     .product-card {
-        width: calc(50% - 4em); /* Two cards per row */
+        width: calc(50% - 4em); 
     }
 }
 
 @media only screen and (max-width: 400px) {
     .product-card {
-        width: 100%; /* One card per row */
+        width: 50%; 
     }
 }
 
