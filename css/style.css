@@ -217,3 +217,7 @@ section {
         width: 100%; /* One card per row */
     }
 }
+
+.product-image{
+    width: 30%;
+}
