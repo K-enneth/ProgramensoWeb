@@ -8,6 +8,3 @@ firebaseCRUD(app);
 authEmail(app);
 authGoogle(app);
 togglePopup();
-
-
-  
