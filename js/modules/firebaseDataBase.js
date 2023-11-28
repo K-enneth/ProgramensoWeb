@@ -13,26 +13,29 @@ export function firebaseCRUD(app) {
         $template = d.getElementById("template-product").content, 
         $fragment = d.createDocumentFragment();
 
-        function renderProducts(searchTerm = "") {
-            onValue(refPrice, (snapshot) => {
-                $container.innerHTML = "";
-                snapshot.forEach((el) => {
-                    let values = el.val();
-                    const productName = values.product.toLowerCase();
-    
-                    if (productName.includes(searchTerm.toLowerCase())) {
-                        $template.querySelector(".product").innerText = values.product;
-                        $template.querySelector(".price").innerText = "Precio: $" + values.price;
-                        $template.querySelector(".type").innerText = values.type;
-    
-                        let $clone = d.importNode($template, true);
-                        $fragment.appendChild($clone);
-                    }
-                });
-    
-                $container.appendChild($fragment);
+    function renderProducts(searchTerm = "") {
+        onValue(refPrice, (snapshot) => {
+            $container.innerHTML = "";
+            snapshot.forEach((el) => {
+                let values = el.val();
+                const productName = values.product.toLowerCase();
+                if (productName.includes(searchTerm.toLowerCase())) {
+                    $template.querySelector(".product").innerText = values.product;
+                    $template.querySelector(".price").innerText = "Precio: $" + values.price;
+                    $template.querySelector(".type").innerText = values.type;
+                    
+                    // Modificación para incluir la imagen
+                    const image = values.foto; // Supongamos que la imagen está almacenada en tu base de datos
+                    $template.querySelector(".product-image").src = image;
+
+                    let $clone = d.importNode($template, true);
+                    $fragment.appendChild($clone);
+                }
             });
-        }
+
+            $container.appendChild($fragment);
+        });
+    }
 
     d.addEventListener("DOMContentLoaded", (e) => renderProducts());
 
@@ -41,4 +44,5 @@ export function firebaseCRUD(app) {
         renderProducts(searchTerm);
     });
 }
+
 
